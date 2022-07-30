@@ -8,7 +8,7 @@ build: link
 
 .PHONY: link
 link: unlink
-	ln -sf "$(realpath keymap)" "${KEYMAP_DIR}"
+	ln -sf "$(realpath src)" "${KEYMAP_DIR}"
 
 .PHONY: unlink
 unlink:
