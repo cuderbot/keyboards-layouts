@@ -118,7 +118,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* ADJUST
  * ,--------------------------------------------.                    ,-----------------------------------------.
- * |      |QWERTY|COLEMAK|     |      |MACWIN|                    |      |      |      |      |      |      |
+ * |      |QWERTY|COLEMAK|     |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+---------|                    |------+------+------+------+------+------|
  * |QK_BOOT|     |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+---------|                    |------+------+------+------+------+------|
@@ -131,7 +131,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *             `----------------------------------'           '------''---------------------------'
  */
   [_ADJUST] = LAYOUT( \
-  XXXXXXX, KC_QWERTY,   KC_COLEMAK, CG_TOGG, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+  XXXXXXX, KC_QWERTY,   KC_COLEMAK, XXXXXXX, XXXXXXX, XXXXXXX,                   AG_SWAP, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
   QK_BOOT, XXXXXXX,     XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
   XXXXXXX, XXXXXXX,     RGB_MOD,    RGB_SAI, RGB_VAI, RGB_HUI,                       XXXXXXX, KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX, \
   XXXXXXX, XXXXXXX,     RGB_RMOD,    RGB_SAD, RGB_VAD, RGB_HUD, XXXXXXX,     XXXXXXX, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX, \
@@ -406,9 +406,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         case _QWERTY:
             if (index == 0) {
                 if (clockwise) {
-                    tap_code(KC_VOLD);
+                    tap_code(KC_WH_D);
                 } else {
-                    tap_code(KC_VOLU);
+                    tap_code(KC_WH_U);
                 }
             }
         break;
@@ -426,9 +426,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         case _MOUSE:
             if (index == 0) {
                 if (clockwise) {
-                    tap_code(KC_WH_D);
+                    tap_code(KC_VOLD);
                 } else {
-                    tap_code(KC_WH_U);
+                    tap_code(KC_VOLU);
                 }
             }
     }
