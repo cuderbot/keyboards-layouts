@@ -41,7 +41,7 @@
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3 // el pin conectado a los datos del led.
 
-
+/* RGB lights effects */
 #ifdef RGB_MATRIX_ENABLE
 	#define RGBLED_NUM 35    // Number of LEDs
 	#define RGBLED_NUM 35    // Number of LEDs
