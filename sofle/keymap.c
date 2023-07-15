@@ -117,21 +117,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          _______, _______, _______, _______, _______,       _______, _______, _______, _______, _______ \
 ),
 /* ADJUST
- * ,--------------------------------------------.                    ,-----------------------------------------.
- * |      |QWERTY|COLEMAK|     |      |      |                    |      |      |      |      |      |      |
- * |------+------+------+------+------+---------|                    |------+------+------+------+------+------|
- * |QK_BOOT|     |      |      |      |      |                    |      |      |      |      |      |      |
- * |------+------+------+------+------+---------|                    |------+------+------+------+------+------|
- * |      |      |RGB_MOD|RGB_SAI|RGB_VAI|RGB_HUI|-------.    ,-------|      | VOLDO| MUTE | VOLUP|      |      |
- * |------+------+------+------+------+---------|  MUTE |    |       |------+------+------+------+------+------|
- * |      |      |RGB_RMOD|RGB_SAD|RGB_VAD|RGB_HUD|-------|    |-------|      | PREV | PLAY | NEXT |      |      |
- * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
- *            |      |      |      |      |/       /         \      \ |      |      |      |      |
- *             `----------------------------------'           '------''---------------------------'
+ * ,-----------------------------------------------.                    ,-----------------------------------------.
+ * |       |QWERTY|COLEMAK |       |AGnorm |AGswap |                    |      |      |      |      |      |      |
+ * |-------+------+--------+-------+-------+-------|                    |------+------+------+------+------+------|
+ * |QK_BOOT|      |        |       |       |       |                    |      |      |      |      |      |      |
+ * |-------+------+--------+-------+-------+-------|                    |------+------+------+------+------+------|
+ * |       |      |RGB_MOD |RGB_SAI|RGB_VAI|RGB_HUI|-------.    ,-------|      | VOLDO| MUTE | VOLUP|      |      |
+ * |-------+------+--------+-------+-------+-------|  MUTE |    |       |------+------+------+------+------+------|
+ * |       |      |RGB_RMOD|RGB_SAD|RGB_VAD|RGB_HUD|-------|    |-------|      | PREV | PLAY | NEXT |      |      |
+ * `-----------------------------------------------/       /     \      \-----------------------------------------'
+ *                  | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
+ *                  |      |      |      |      |/       /         \      \ |      |      |      |      |
+ *                  `-----------------------------------'           '------''---------------------------'
  */
   [_ADJUST] = LAYOUT( \
-  XXXXXXX, KC_QWERTY,   KC_COLEMAK, XXXXXXX, XXXXXXX, XXXXXXX,                   AG_SWAP, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+  XXXXXXX, KC_QWERTY,   KC_COLEMAK, XXXXXXX, AG_NORM, AG_SWAP,                   AG_SWAP, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
   QK_BOOT, XXXXXXX,     XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX,                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
   XXXXXXX, XXXXXXX,     RGB_MOD,    RGB_SAI, RGB_VAI, RGB_HUI,                       XXXXXXX, KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX, \
   XXXXXXX, XXXXXXX,     RGB_RMOD,    RGB_SAD, RGB_VAD, RGB_HUD, XXXXXXX,     XXXXXXX, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX, \
