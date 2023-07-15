@@ -233,6 +233,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 layer_off(_ADJUST);
             }
             return false;
+        case KC_MOUSE:
+            if (record->event.pressed) {
+                layer_on(_MOUSE);
+            } else {
+                layer_off(_MOUSE);
+            }
+            return false;
         case KC_PRVWD:
             if (record->event.pressed) {
                 if (keymap_config.swap_lctl_lgui) {
@@ -351,13 +358,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
                 unregister_mods(mod_config(MOD_LCTL));
                 unregister_code(KC_Z);
-            }
-            return false;
-        case KC_MOUSE:
-            if (record->event.pressed) {
-                layer_on(_MOUSE);
-            } else {
-                layer_off(_MOUSE);
             }
             return false;
     }
