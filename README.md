@@ -1,13 +1,13 @@
 # Keyboard Layouts
 
-Here are all my keyboard layout
+En este repo mantengo las configuraciones de mis teclado
 
-## Why not use QMK repo
-
-i think that repo is quite big and would like sync only my changes.
-
-## Current Layouts
+### Teclados disponibles
 
 - planck.
 - mw65.
 - sofle.
+
+## Porque no utilizo el repo 'X'
+
+porque, solo quiero sincronizar mis cambios y ya
